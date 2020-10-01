@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation"
+    app:startDestination="@id/jokes_dest">
+
+    <fragment
+        android:id="@+id/jokes_dest"
+        android:name="com.laink.hedgehog_test.ui.fragments.JokesFragment"
+        android:label="JOKES">
+        <action
+            android:id="@+id/action_jokesFragment_to_webFragment"
+            app:destination="@id/web_dest"
+            app:popUpTo="@id/jokes_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/web_dest"
+        android:name="com.laink.hedgehog_test.ui.fragments.WebFragment"
+        android:label="WEB VIEW" />
+</navigation>
